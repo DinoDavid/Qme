@@ -1,40 +1,26 @@
-name: Deploy to GitHub Pages
+name: Secure Workflow
 
 on:
   push:
     branches:
-      - main  # Kjører når det er en push til "main"-grenen
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3  # Oppdatert til v3
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3  # Oppdatert til v3
-        with:
-          node-version: '20'  # Du kan også bruke '18' eller '20' avhengig av ditt behov
-
-      - name: Create public directory if it doesn't exist
-        run: mkdir -p public
-
-      - name: Inject Firebase API Key
-        run: |
-          echo "const firebaseConfig = {" > public/firebaseConfig.js
-          echo "  apiKey: '${{ secrets.FIREBASE_API_KEY }}'," >> public/firebaseConfig.js
-          echo "  authDomain: 'qme1-423d8.firebaseapp.com'," >> public/firebaseConfig.js
-          echo "  projectId: 'qme1-423d8'," >> public/firebaseConfig.js
-          echo "  storageBucket: 'qme1-423d8.appspot.com'," >> public/firebaseConfig.js
-          echo "  messagingSenderId: '425603580627'," >> public/firebaseConfig.js
-          echo "  appId: '1:425603580627:web:c671dd03b1c40136370a26'," >> public/firebaseConfig.js
-          echo "  measurementId: 'G-CSQGSQWCXT'" >> public/firebaseConfig.js
-          echo "};" >> public/firebaseConfig.js
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+    - name: Inject API Key into Config File
+      run: |
+        echo "const firebaseConfig = {" > public/firebaseConfig.js
+        echo "  apiKey: '${{ secrets.FIREBASE_API_KEY }}'," >> public/firebaseConfig.js
+        echo "  authDomain: 'qme1-423d8.firebaseapp.com'," >> public/firebaseConfig.js
+        echo "  projectId: 'qme1-423d8'," >> public/firebaseConfig.js
+        echo "  storageBucket: 'qme1-423d8.appspot.com'," >> public/firebaseConfig.js
+        echo "  messagingSenderId: '425603580627'," >> public/firebaseConfig.js
+        echo "  appId: '1:425603580627:web:c671dd03b1c40136370a26'," >> public/firebaseConfig.js
+        echo "  measurementId: 'G-CSQGSQWCXT'" >> public/firebaseConfig.js
+        echo "};" >> public/firebaseConfig.js
