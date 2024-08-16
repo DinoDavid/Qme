@@ -1,3 +1,6 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+
 let currentQuestionIndex = 0;
 let totalScore = 0;
 let maxTotalScore = 0;
@@ -5,6 +8,22 @@ let categoryScores = {};
 let userAnswers = [];
 let userInfo = {};
 let questions = [];  // Tom liste som fylles dynamisk
+
+
+// Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyAujHYBr458zucLPt_FUQMaZfBustO7LR0",
+    authDomain: "qme1-423d8.firebaseapp.com",
+    projectId: "qme1-423d8",
+    storageBucket: "qme1-423d8.appspot.com",
+    messagingSenderId: "425603580627",
+    appId: "1:425603580627:web:c671dd03b1c40136370a26",
+    measurementId: "G-CSQGSQWCXT"
+  };
+
+  // Initialiser Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 // Fetch questions from quest.json
 fetch('quest.json')
@@ -132,10 +151,6 @@ function showResults() {
             }
         }
     });
-}
-
-// Lagre resultatene
-document.getElementById('saveResultsButton').addEventListener('click', function () {
     const resultData = {
         userInfo,
         userAnswers,
@@ -143,16 +158,13 @@ document.getElementById('saveResultsButton').addEventListener('click', function 
         categoryScores
     };
     
-    // Lagre i en lokal fil (midlertidig løsning)
-    fetch('/save-results', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(resultData)
-    }).then(response => {
-        if (response.ok) {
+    // Push data to Firebase Realtime Database
+    addDoc(collection(db, 'surveyResults'), resultData)
+        .then(() => {
             alert('Resultater lagret!');
-        }
-    });
-});
+        })
+        .catch((error) => {
+            console.error('Error saving results:', error);
+        });
+}
+
