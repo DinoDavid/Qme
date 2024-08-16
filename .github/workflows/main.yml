@@ -16,7 +16,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3  # Oppdatert til v3
         with:
-          node-version: '16'  # Du kan også bruke '18' eller '20' avhengig av ditt behov
+          node-version: '20'  # Du kan også bruke '18' eller '20' avhengig av ditt behov
+
+      - name: Create public directory if it doesn't exist
+        run: mkdir -p public
 
       - name: Inject Firebase API Key
         run: |
