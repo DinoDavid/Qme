@@ -11,12 +11,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # Oppdatert til v3
 
       - name: Set up Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3  # Oppdatert til v3
         with:
-          node-version: '14'
+          node-version: '16'  # Du kan også bruke '18' eller '20' avhengig av ditt behov
+
+      - name: Debugging
+        run: |
+          set -x  # Dette vil gjøre at alle kommandoer som kjøres, logges
 
       - name: Inject Firebase API Key
         run: |
