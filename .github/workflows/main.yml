@@ -15,15 +15,18 @@ jobs:
 
     - name: Create public directory if it doesn't exist
       run: mkdir -p public
-
-    - name: Inject API Key into Config File
+    
+    - name: Build project
       run: |
-        echo "const firebaseConfig = {" > public/firebaseConfig.js
-        echo "  apiKey: '${{ secrets.FIREBASE_API_KEY }}'," >> public/firebaseConfig.js
-        echo "  authDomain: 'qme1-423d8.firebaseapp.com'," >> public/firebaseConfig.js
-        echo "  projectId: 'qme1-423d8'," >> public/firebaseConfig.js
-        echo "  storageBucket: 'qme1-423d8.appspot.com'," >> public/firebaseConfig.js
-        echo "  messagingSenderId: '425603580627'," >> public/firebaseConfig.js
-        echo "  appId: '1:425603580627:web:c671dd03b1c40136370a26'," >> public/firebaseConfig.js
-        echo "  measurementId: 'G-CSQGSQWCXT'" >> public/firebaseConfig.js
-        echo "};" >> public/firebaseConfig.js
+        echo "window.firebaseConfig = {
+          apiKey: '${{ secrets.FIREBASE_API_KEY }}',
+          authDomain: 'qme1-423d8.firebaseapp.com',
+          projectId: 'qme1-423d8',
+          storageBucket: 'qme1-423d8.appspot.com',
+          messagingSenderId: '425603580627',
+          appId: '1:425603580627:web:c671dd03b1c40136370a26',
+          measurementId: 'G-CSQGSQWCXT'
+        };" > public/firebaseConfig.js
+
+      env:
+        FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
