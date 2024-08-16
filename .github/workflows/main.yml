@@ -18,21 +18,17 @@ jobs:
         with:
           node-version: '16'  # Du kan også bruke '18' eller '20' avhengig av ditt behov
 
-      - name: Debugging
-        run: |
-          set -x  # Dette vil gjøre at alle kommandoer som kjøres, logges
-
       - name: Inject Firebase API Key
         run: |
-          echo "const firebaseConfig = {
-            apiKey: '${{ secrets.FIREBASE_API_KEY }}',
-            authDomain: 'qme1-423d8.firebaseapp.com',
-            projectId: 'qme1-423d8',
-            storageBucket: 'qme1-423d8.appspot.com',
-            messagingSenderId: '425603580627',
-            appId: '1:425603580627:web:c671dd03b1c40136370a26',
-            measurementId: 'G-CSQGSQWCXT'
-          };" > public/firebaseConfig.js
+          echo "const firebaseConfig = {" > public/firebaseConfig.js
+          echo "  apiKey: '${{ secrets.FIREBASE_API_KEY }}'," >> public/firebaseConfig.js
+          echo "  authDomain: 'qme1-423d8.firebaseapp.com'," >> public/firebaseConfig.js
+          echo "  projectId: 'qme1-423d8'," >> public/firebaseConfig.js
+          echo "  storageBucket: 'qme1-423d8.appspot.com'," >> public/firebaseConfig.js
+          echo "  messagingSenderId: '425603580627'," >> public/firebaseConfig.js
+          echo "  appId: '1:425603580627:web:c671dd03b1c40136370a26'," >> public/firebaseConfig.js
+          echo "  measurementId: 'G-CSQGSQWCXT'" >> public/firebaseConfig.js
+          echo "};" >> public/firebaseConfig.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
