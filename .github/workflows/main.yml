@@ -13,6 +13,9 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
+    - name: Create public directory if it doesn't exist
+      run: mkdir -p public
+
     - name: Inject API Key into Config File
       run: |
         echo "const firebaseConfig = {" > public/firebaseConfig.js
