@@ -1,0 +1,36 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Kjører når det er en push til "main"-grenen
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Workflowen kjører på en virtuell Ubuntu-maskin
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  # Sjekker ut koden din
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Angir versjonen av Node.js
+
+      - name: Install dependencies
+        run: npm install  # Installerer prosjektavhengigheter
+
+      - name: Replace API Key
+        run: echo "REACT_APP_FIREBASE_API_KEY=${{ secrets.FIREBASE_API_KEY }}" >> .env
+        env:
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+
+      - name: Build project
+        run: npm run build  # Bygger prosjektet ditt
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Mappen som inneholder de ferdige bygde filene
