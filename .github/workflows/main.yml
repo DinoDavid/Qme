@@ -7,30 +7,31 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # Workflowen kjører på en virtuell Ubuntu-maskin
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2  # Sjekker ut koden din
+        uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '14'  # Angir versjonen av Node.js
+          node-version: '14'
 
-      - name: Install dependencies
-        run: npm install  # Installerer prosjektavhengigheter
-
-      - name: Replace API Key
-        run: echo "REACT_APP_FIREBASE_API_KEY=${{ secrets.FIREBASE_API_KEY }}" >> .env
-        env:
-          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
-
-      - name: Build project
-        run: npm run build  # Bygger prosjektet ditt
+      - name: Inject Firebase API Key
+        run: |
+          echo "const firebaseConfig = {
+            apiKey: '${{ secrets.FIREBASE_API_KEY }}',
+            authDomain: "qme1-423d8.firebaseapp.com",
+            projectId: "qme1-423d8",
+            storageBucket: "qme1-423d8.appspot.com",
+            messagingSenderId: "425603580627",
+            appId: "1:425603580627:web:c671dd03b1c40136370a26",
+            measurementId: "G-CSQGSQWCXT"
+          };" > public/firebaseConfig.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Mappen som inneholder de ferdige bygde filene
+          publish_dir: ./public
