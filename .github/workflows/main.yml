@@ -13,15 +13,11 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Set up Node.js (required for npm scripts)
         uses: actions/setup-node@v3
         with:
           node-version: '16'  # Eller en annen versjon du bruker
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        env:
-          REACT_APP_API_KEY: ${{ secrets.FIREBASE_API_KEY }}  # Tilgjengeliggjør API-nøkkelen som en miljøvariabel
-        run: npm run build  # Tilpass denne kommandoen avhengig av byggeverktøyet ditt (f.eks., `npm run build` eller `yarn build`)
+      - name: Inject API key into JavaScript
+        run: |
+          echo "const API_KEY = '${{ secrets.FIREBASE_API_KEY }}';" > ./config.js
