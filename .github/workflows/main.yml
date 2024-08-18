@@ -1,32 +1,27 @@
-name: Secure Workflow
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main  # Endre hvis din hovedgren har et annet navn
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+      - name: Check out code
+        uses: actions/checkout@v3
 
-    - name: Create public directory if it doesn't exist
-      run: mkdir -p public
-    
-    - name: Build project
-      run: |
-        echo "window.firebaseConfig = {
-          apiKey: '${{ secrets.FIREBASE_API_KEY }}',
-          authDomain: 'qme1-423d8.firebaseapp.com',
-          projectId: 'qme1-423d8',
-          storageBucket: 'qme1-423d8.appspot.com',
-          messagingSenderId: '425603580627',
-          appId: '1:425603580627:web:c671dd03b1c40136370a26',
-          measurementId: 'G-CSQGSQWCXT'
-        };" > public/firebaseConfig.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'  # Eller en annen versjon du bruker
 
-      env:
-        FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        env:
+          REACT_APP_API_KEY: ${{ secrets.FIREBASE_API_KEY }}  # Tilgjengeliggjør API-nøkkelen som en miljøvariabel
+        run: npm run build  # Tilpass denne kommandoen avhengig av byggeverktøyet ditt (f.eks., `npm run build` eller `yarn build`)
