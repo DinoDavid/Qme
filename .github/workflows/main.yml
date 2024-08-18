@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Firebase
 
 on:
   push:
@@ -32,8 +32,3 @@ jobs:
             appId: "1:425603580627:web:c671dd03b1c40136370a26",
             measurementId: "G-CSQGSQWCXT"
           };" > public/config.js
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./public
