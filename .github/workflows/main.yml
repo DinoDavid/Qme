@@ -24,7 +24,7 @@ jobs:
       - name: Create public directory if it does not exist
         run: mkdir -p public
 
-      - name: Inject Firebase API Key and commit to main
+      - name: Inject Firebase API Key into config.js
         run: |
           echo "const firebaseConfig = {
             apiKey: '${{ secrets.FIREBASE_API_KEY }}',
@@ -35,10 +35,14 @@ jobs:
             appId: '1:425603580627:web:c671dd03b1c40136370a26',
             measurementId: 'G-CSQGSQWCXT'
           };" > public/config.js
+
+      - name: Commit and push config.js to main
+        run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "GitHub Actions"
+          git config --local user.name "github-actions[bot]"
           git add public/config.js
-          git commit -m "Add config.js with Firebase API Key"
+          git commit -m "Add config.js"
+          git push origin main
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
