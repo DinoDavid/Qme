@@ -25,6 +25,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+
 // Fetch questions from quest.json
 fetch('quest.json')
     .then(response => response.json())
@@ -76,7 +77,7 @@ function handleAnswer(isYes) {
     const currentQuestion = questions[currentQuestionIndex];
     userAnswers.push({
         question: currentQuestion.question,
-        answer: isYes ? "Ja" : "Nei"
+        answer: isYes ? "Enig" : "Uenig"
     });
 
     if (isYes) {

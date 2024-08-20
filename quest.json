@@ -6,32 +6,17 @@
       "category": "Personlighet og temperament"
     },
     {
-      "question": "Du kunne aldri ha løyet til noen, selv om det kan såre vedkommende?",
+      "question": "Du synes det er viktigere å være 100% ærlig enn å lyve, selv når du vet at sannheten er svært ubehagelig og kan såre noen skikkelig?",
       "weight": 1,
       "category": "Personlighet og temperament"
     },
     {
-      "question": "Du blir ikke lett påvirket av andres meninger?",
+      "question": "Du verdsetter logikk og rasjonell tenkning i beslutningsprosesser mer enn følelser?",
       "weight": 1,
       "category": "Personlighet og temperament"
     },
     {
-      "question": "Synes du det er viktig å være ærlig, selv når sannheten er ubehagelig?",
-      "weight": 1,
-      "category": "Personlighet og temperament"
-    },
-    {
-      "question": "Verdsetter du logikk og rasjonell tenkning i beslutningsprosesser mer enn følelser?",
-      "weight": 1,
-      "category": "Personlighet og temperament"
-    },
-    {
-      "question": "Foretrekker du å planlegge fremfor å improvisere?",
-      "weight": 1,
-      "category": "Personlighet og temperament"
-    },
-    {
-      "question": "Du liker ikke å ta spontane valg?",
+      "question": "Du foretrekker som regel å bruke tid på å planlegge alt nøye fremfor å være spontan?",
       "weight": 1,
       "category": "Personlighet og temperament"
     },
@@ -41,87 +26,67 @@
       "category": "Personlighet og temperament"
     },
     {
-      "question": "Du er ikke redd for å ende opp alene i livet?",
+      "question": "Du er ikke redd for å ende opp alene i livet ditt?",
       "weight": 1,
       "category": "Personlighet og temperament"
     },
     {
-      "question": "Det er få ting som kan få deg til å gråte?",
+      "question": "Det er svært få ting som kan få deg til å gråte?",
       "weight": 1,
       "category": "Personlighet og temperament"
     },
     {
-      "question": "Du har aldri opplevd noe form for angst?",
-      "weight": 1,
-      "category": "Personlighet og temperament"
-    },
-    {
-      "question": "Om partneren din er lite emosjonell, ser du på det som en fordel?",
+      "question": "Du er veldig interessert i å diskutere filosofiske og eksistensielle spørsmål, selv om de er fjerne og veldig abstrakte?",
       "weight": 1,
       "category": "Kommunikasjon"
     },
     {
-      "question": "Er du interessert i å diskutere filosofiske og eksistensielle spørsmål?",
+      "question": "Du foretrekker ikke følge strømmen og utfordre konvensjonelle tanker eller normer?",
       "weight": 1,
       "category": "Kommunikasjon"
     },
     {
-      "question": "Liker du å utfordre konvensjonelle tanker eller normer?",
+      "question": "Du er komfortabel med/foretrekker direkte kommunikasjon og ærlige tilbakemeldinger?",
       "weight": 1,
       "category": "Kommunikasjon"
     },
     {
-      "question": "Du liker og er åpen for å diskutere dyptgående, fjerne og abstrakte ideer?",
+      "question": "Du tar gjerne imot kritikk fra andre?",
       "weight": 1,
       "category": "Kommunikasjon"
     },
     {
-      "question": "Er du komfortabel med direkte kommunikasjon og tilbakemeldinger?",
+      "question": "Du er opptatt av å holde mobilen langt unna når du er med noen andre?",
       "weight": 1,
       "category": "Kommunikasjon"
     },
     {
-      "question": "Setter du pris på felles kvalitetstid uten forstyrrelser som mobil osv?",
-      "weight": 1,
-      "category": "Kommunikasjon"
-    },
-    {
-      "question": "Er du komfortabel med å gi partneren din 'space' når det trengs?",
-      "weight": 1,
-      "category": "Kommunikasjon"
-    },
-    {
-      "question": "Er du enig i at planlegging er nøkkelen til suksess?",
-      "weight": 1,
-      "category": "Kommunikasjon"
-    },
-    {
-      "question": "Foretrekker du å unngå mange sosiale aktiviteter?",
+      "question": "Du foretrekker å unngå å delta i mange sosiale aktiviteter?",
       "weight": 1,
       "category": "Sosiale relasjoner og familie"
     },
     {
-      "question": "Er det greit for deg å ikke ha noen kjæledyr?",
+      "question": "Det er helt greit for det å ikke ha noen kjæledyr?",
       "weight": 5,
       "category": "Sosiale relasjoner og familie"
     },
     {
-      "question": "Foretrekker du å være i små sosiale grupper fremfor store sammenkomster?",
+      "question": "Du foretrekker å være i små sosiale grupper fremfor store sammenkomster?",
       "weight": 1,
       "category": "Sosiale relasjoner og familie"
     },
     {
-      "question": "Er du lite interessert i konserter og store folkemengder?",
+      "question": "Du er lite interessert i konserter og store folkemengder?",
       "weight": 1,
       "category": "Sosiale relasjoner og familie"
     },
     {
-      "question": "Trives du med å bruke tid alene i ditt eget selskap?",
+      "question": "Du trives svært godt med å bruke tid alene i ditt eget selskap?",
       "weight": 1,
       "category": "Sosiale relasjoner og familie"
     },
     {
-      "question": "Kunne du tenkt deg et liv uten barn?",
+      "question": "Du kunne tenkt deg et liv uten barn?",
       "weight": 5,
       "category": "Sosiale relasjoner og familie"
     },
@@ -131,12 +96,12 @@
       "category": "Sosiale relasjoner og familie"
     },
     {
-      "question": "Er du villig til å akseptere en partner som ikke ønsker barn, og er du fullstendig komfortabel med dette valget?",
+      "question": "Du er villig til å akseptere en partner som ikke ønsker barn, og er du fullstendig komfortabel med dette valget?",
       "weight": 5,
       "category": "Sosiale relasjoner og familie"
     },
     {
-      "question": "Investerer du mye tid og krefter i en sunn livsstil?",
+      "question": "Du investerer mye tid og krefter i en sunn livsstil?",
       "weight": 1,
       "category": "Livstil og vaner"
     },
@@ -146,7 +111,7 @@
       "category": "Livstil og vaner"
     },
     {
-      "question": "Unngår du store mengder alkohol?",
+      "question": "Du unngår helst alkohol?",
       "weight": 1,
       "category": "Livstil og vaner"
     },
@@ -156,12 +121,7 @@
       "category": "Livstil og vaner"
     },
     {
-      "question": "Du har aldri prøvd narkotika eller andre rusmidler?",
-      "weight": 5,
-      "category": "Livstil og vaner"
-    },
-    {
-      "question": "Er du fri for allergier?",
+      "question": "Du er fri for allergier og tåler å spise stortsett alt?",
       "weight": 1,
       "category": "Livstil og vaner"
     },
@@ -176,27 +136,17 @@
       "category": "Livstil og vaner"
     },
     {
-      "question": "Du har ingen fysiske eller psykiske plager?",
+      "question": "Du synes det er viktig å bruke solkrem i ansiktet selv om det ikke er sol ute?",
       "weight": 1,
       "category": "Livstil og vaner"
     },
     {
-      "question": "Bruker du solkrem i ansiktet når det ikke er sol ute?",
+      "question": "Du er et A-menneske og liker å stå opp tidlig?",
       "weight": 1,
       "category": "Livstil og vaner"
     },
     {
-      "question": "Mener du at du selv har fullstendig struktur og orden på livet ditt?",
-      "weight": 1,
-      "category": "Livstil og vaner"
-    },
-    {
-      "question": "Er du et A-menneske og liker å stå opp tidlig?",
-      "weight": 1,
-      "category": "Livstil og vaner"
-    },
-    {
-      "question": "Er du en ryddig person som alltid holder styr på tingene dine?",
+      "question": "Du er en ryddig person som alltid holder styr på tingene dine?",
       "weight": 1,
       "category": "Livstil og vaner"
     },
@@ -206,7 +156,7 @@
       "category": "Interesser og fritid"
     },
     {
-      "question": "Bruker du mye tid på å dyrke dine hobbyer?",
+      "question": "Du bruker mye tid på å dyrke dine hobbyer?",
       "weight": 1,
       "category": "Interesser og fritid"
     },
@@ -216,7 +166,7 @@
       "category": "Interesser og fritid"
     },
     {
-      "question": "Spiller du på noen musikkinstrumenter?",
+      "question": "Du spiller på noen musikkinstrumenter?",
       "weight": 1,
       "category": "Interesser og fritid"
     },
@@ -226,32 +176,32 @@
       "category": "Interesser og fritid"
     },
     {
-      "question": "Finner du stor glede i å lære nye ferdigheter eller kunnskaper på egen hånd?",
+      "question": "Du finner stor glede i å lære nye ferdigheter eller kunnskaper på egen hånd?",
       "weight": 1,
       "category": "Interesser og fritid"
     },
     {
-      "question": "Bruker du mye tid og krefter på å utforske nye ideer og konsepter?",
+      "question": "Du bruker mye tid og krefter på å utforske nye ideer og konsepter?",
       "weight": 1,
       "category": "Interesser og fritid"
     },
     {
-      "question": "Har du en stor interesse for teknologi eller innovasjon?",
+      "question": "Du har en stor interesse for teknologi eller innovasjon?",
       "weight": 1,
       "category": "Interesser og fritid"
     },
     {
-      "question": "Er du villig til å akseptere at partneren bruker mye tid på sine hobbyer?",
-      "weight": 1,
-      "category": "Interesser og fritid"
-    },
-    {
-      "question": "Hvis det blir mulig å flytte til Mars, ville du gjort det?",
+      "question": "Du vil gjerne ta en ferietur til Mars når det blir mulig?",
       "weight": 1,
       "category": "Verdier og Livsmål"
     },
     {
-      "question": "Er du opptatt i å kunne leve så lenge som mulig?",
+      "question": "Du er opptatt av å kunne leve så lenge som mulig?",
+      "weight": 1,
+      "category": "Verdier og Livsmål"
+    },
+    {
+      "question": "Du ville fortsatt syntes at livet er verdt å leve, selv om alle dine venner og bekjente var døde?",
       "weight": 1,
       "category": "Verdier og Livsmål"
     },
@@ -261,42 +211,37 @@
       "category": "Verdier og Livsmål"
     },
     {
-      "question": "Ville du fortsatt syntes at livet er verdt å leve, selv om dine venner og bekjente var døde?",
+      "question": "Du har en tendens til å tenke på fremtiden fremfor å fokusere på nåtiden?",
       "weight": 1,
       "category": "Verdier og Livsmål"
     },
     {
-      "question": "Har du en tendens til å tenke på fremtiden fremfor å fokusere på nåtiden?",
-      "weight": 1,
-      "category": "Verdier og Livsmål"
-    },
-    {
-      "question": "Har du fullsendig kontroll og oversikt over din økonomi?",
+      "question": "Du har fullsendig kontroll og oversikt over din økonomi?",
       "weight": 1,
       "category": "Økonomisk kompatibilitet"
     },
     {
-      "question": "Har du et mål om å maksimere formuen din og bli økonomisk uavhengig?",
+      "question": "Du har et aktivt mål om å maksimere formuen din og bli økonomisk uavhengig?",
       "weight": 1,
       "category": "Økonomisk kompatibilitet"
     },
     {
-      "question": "Er du opptatt av å spare penger og unngå unødvendige utgifter?",
-      "weight": 1,
-      "category": "Økonomisk kompatibilitet"
-    },
-    {
-      "question": "Er du interessert i investeringer og nye/kreative måter å tjene penger på?",
-      "weight": 1,
-      "category": "Økonomisk kompatibilitet"
-    },
-    {
-      "question": "Du er ikke så opptatt av det materialistiske som gaver osv?",
+      "question": "Materialistiske ting som gaver er ikke viktig for deg i et sunt forhold?",
       "weight": 5,
       "category": "Økonomisk kompatibilitet"
     },
     {
-      "question": "Du er enig om at det skal være en god balanse mellom deg og din partner med tanken på økonomi, slik at ingen føler seg utnyttet?",
+      "question": "Du er svært opptatt av å spare penger og unngå unødvendige utgifter?",
+      "weight": 1,
+      "category": "Økonomisk kompatibilitet"
+    },
+    {
+      "question": "Du er interessert i investeringer og nye/kreative måter å tjene penger på?",
+      "weight": 1,
+      "category": "Økonomisk kompatibilitet"
+    },
+    {
+      "question": "Du mener at det ikke er så viktig for deg å bli spandert på når du er ute på en date?",
       "weight": 5,
       "category": "Økonomisk kompatibilitet"
     }
